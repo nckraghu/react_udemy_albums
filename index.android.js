@@ -5,10 +5,8 @@ import React from 'react';
 import { Text, AppRegistry } from 'react-native';
 
 //Create a Component
-const App = () => {
-  return (
+const App = () => (
     <Text>Hello World!</Text>
   );
-};
 
 AppRegistry.registerComponent('albums', () => App);
