@@ -5,16 +5,16 @@ import Card from './Card';
 import CardSection from './CardSection';
 
 //create Component
-const AlbumDetail = (props) => {
+const AlbumDetail = ({ album }) => {
   return (
     <Card>
       <CardSection>
         <View>
-          <Image source={{ uri: props.album.thumbnail_image }} style={styles.thumbnailStyle}/>
+          <Image source={{ uri: album.thumbnail_image }} style={styles.thumbnailStyle} />
         </View>
         <View style={styles.headerContentStyle}>
-          <Text>{props.album.title}</Text>
-          <Text>{props.album.artist}</Text>
+          <Text>{album.title}</Text>
+          <Text>{album.artist}</Text>
         </View>
       </CardSection>
     </Card>
