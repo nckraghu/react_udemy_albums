@@ -6,15 +6,17 @@ import CardSection from './CardSection';
 
 //create Component
 const AlbumDetail = ({ album }) => {
+  //destructuring album
+  const { title, artist, thumbnail_image } = album;
   return (
     <Card>
       <CardSection>
         <View>
-          <Image source={{ uri: album.thumbnail_image }} style={styles.thumbnailStyle} />
+          <Image source={{ uri: thumbnail_image }} style={styles.thumbnailStyle} />
         </View>
         <View style={styles.headerContentStyle}>
-          <Text>{album.title}</Text>
-          <Text>{album.artist}</Text>
+          <Text>{title}</Text>
+          <Text>{artist}</Text>
         </View>
       </CardSection>
     </Card>
