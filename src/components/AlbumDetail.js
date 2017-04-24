@@ -11,6 +11,7 @@ const AlbumDetail = ({ album }) => {
   //destructuring styles
   const {
     headerContentStyle,
+    headerTextStyle,
     thumbnailStyle,
     thumbnailContainerStyle
    } = styles;
@@ -21,7 +22,7 @@ const AlbumDetail = ({ album }) => {
           <Image source={{ uri: thumbnail_image }} style={thumbnailStyle} />
         </View>
         <View style={headerContentStyle}>
-          <Text>{title}</Text>
+          <Text style={headerTextStyle}>{title}</Text>
           <Text>{artist}</Text>
         </View>
       </CardSection>
@@ -33,6 +34,9 @@ const styles = {
   headerContentStyle: {
     flexDirection: 'column',
     justifyContent: 'space-around'
+  },
+  headerTextStyle: {
+    fontSize: 18
   },
   thumbnailStyle: {
     height: 50,
