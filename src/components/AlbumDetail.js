@@ -1,6 +1,6 @@
 //Import libraries for components
 import React from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, Linking } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
 import Button from './Button';
@@ -8,7 +8,7 @@ import Button from './Button';
 //create Component
 const AlbumDetail = ({ album }) => {
   //destructuring album
-  const { title, artist, thumbnail_image, image } = album;
+  const { title, artist, thumbnail_image, image, url } = album;
   //destructuring styles
   const {
     headerContentStyle,
@@ -35,7 +35,7 @@ const AlbumDetail = ({ album }) => {
         />
       </CardSection>
       <CardSection>
-        <Button onPress={() => console.log(title)} />
+        <Button onPress={() => Linking.openURL(url)} />
       </CardSection>
     </Card>
   );
